@@ -22,14 +22,13 @@ body{
 }
 
 .container{
-    max-width: 1520px;
-    padding: 0 20px;
+    padding: 0 40px;
     margin: 0 auto;
 }
 
 .header{
-    padding: 40px;
-    margin-bottom: 129px;
+    padding: 40px 0;
+    margin-bottom: 50px;
 }
 
 .header-wrapper__burger{
@@ -68,56 +67,69 @@ body{
 }
 
 .main{
-    flex: 1;
     position: relative;
+    flex: 1;
 }
 
 .main-wrapper{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    padding: 0 40px;
+    padding-bottom: 50px;
 }
 
-.main-wrapper::before, .main-wrapper::after{
-    content: "";
-    position: absolute;
-}
+
 
 .main-wrapper::before{
-    top: -202px;
-    left: -212px;
+    content: "";
     height: 137px;
     width: 137px;
     background: url("leaf-branch-left.png") no-repeat;
+    position: absolute;
+    top: -100px;
+    left: 0;
 }
 
 .main-wrapper::after{
-    bottom: -102px;
-    right: -253px;
+    content: "";    
     width: 151px;
     height: 167px;
     background: url("leaf-branch-right.png");
+    position: absolute;
+    bottom: 50px;
+    right: 0;
 }
 
 .main-wrapper__title{
     max-width: 634px;
-    color: #2F211E;
+    color: #CA652C;
     font-size: 85px;
     padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0;    
 }
+
+
+
+
 
 .main-wrapper__sushi-right{
     position: absolute;
     top: 0;
     right: 10px;   
     z-index: -1;
+    width: 30%;
 }
 
 .main-wrapper__text{
     color: #9C897F;
     font-size: 20px;
     max-width: 405px;
-    margin-bottom: 45px;
 }
 
 .main-wrapper__order-btn{
@@ -153,7 +165,8 @@ body{
     }
 
     .main-wrapper__sushi-right{
-        width: 600px;
+        width: 400px;
+        top: 180px;
     }
     
 }
@@ -162,7 +175,11 @@ body{
     .main-wrapper__sushi-right{
         width: 300px;
         height: 300px;
-        top: 208px;
+        top: -60px;
+    }
+
+    .main-wrapper__title img{
+        display: none;
     }
     
 }
@@ -171,11 +188,19 @@ body{
     
     .main-wrapper__title img{
         display: none;
-    }
+    }   
+}
 
+@media screen and (max-width:540px) {    
     .main-wrapper__title{
-       
+        font-size: 60px;
     }
+    .main-wrapper__sushi-right{
+        top: 160px;
+    }
+}
+
+@media screen and (max-width:533px) {    
     
 }
 
@@ -196,8 +221,7 @@ body{
     }
     
     .main-wrapper__sushi-right{
-        top: -110px;
-        left: 150px;
+        top: 0;right: 0;
     }
     
 }
